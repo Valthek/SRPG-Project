@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assets.Entities.Attributes
 {
-    class Movement
+    public  class Movement
     {
 
     }

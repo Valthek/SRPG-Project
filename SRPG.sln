@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{568B1F9B-85C1-2F21-6BFC-765D3980929D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SRPG.Test", "..\SRPG.Test\SRPG.Test.csproj", "{77D6B303-BA2C-40C7-9740-86F6E24EFD1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{568B1F9B-85C1-2F21-6BFC-765D3980929D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{568B1F9B-85C1-2F21-6BFC-765D3980929D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{568B1F9B-85C1-2F21-6BFC-765D3980929D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77D6B303-BA2C-40C7-9740-86F6E24EFD1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77D6B303-BA2C-40C7-9740-86F6E24EFD1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77D6B303-BA2C-40C7-9740-86F6E24EFD1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77D6B303-BA2C-40C7-9740-86F6E24EFD1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
