@@ -63,8 +63,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Code\GameManager.cs" />
-    <Compile Include="Assets\Code\InputManager.cs" />
+    <Compile Include="Assets\Entities\Attributes\Health.cs" />
+    <Compile Include="Assets\Entities\IUnit.cs" />
+    <Compile Include="Assets\Managers\GameManager.cs" />
+    <Compile Include="Assets\Managers\InputManager.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Projects/Unity/SRPG/SRPG/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
