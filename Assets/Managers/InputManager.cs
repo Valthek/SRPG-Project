@@ -13,7 +13,10 @@ public class InputManager : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 100.0f))
             {
-                hit.transform.GetComponent<IUnit>().Select();
+                if(hit.transform.GetComponent<IUnit>() != null)
+                {
+                    hit.transform.GetComponent<IUnit>().Select();
+                }
                 StartCoroutine(ScaleMe(hit.transform));
                 Debug.Log("You selected the " + hit.transform.name); // ensure you picked right object
             }
