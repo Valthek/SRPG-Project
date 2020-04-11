@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 
 using Assets.Entities.Interfaces;
 using UnityEngine;
@@ -6,8 +7,15 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-    private Transform selectedUnit;
-    private Transform selectedTile;
+    private Transform _selectedUnit;
+    private Transform _selectedTile;
+
+    void Start()
+    {
+        _selectedTile = null;
+        _selectedUnit = null;
+    }
+
     void Update()
     {
         RaycastHit hit;
@@ -16,22 +24,7 @@ public class InputManager : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 100.0f))
             {
-                if (selectedUnit != null)
-                {
-                    // Deselect current selection
-                    selectedUnit.GetComponent<IUnit>().Deselect();
-                }
-                if (hit.transform.GetComponent<IUnit>() != null)
-                {
-                    // Set new selection
-                    selectedUnit = hit.transform;
-                    hit.transform.GetComponent<IUnit>().Select();
-                }
-                else
-                {
-                    // If we don't click a unit, deselect the whole thing
-                    selectedUnit = null;
-                }
+                _selectedUnit = SelectObject(hit, _selectedUnit, typeof(IUnit));
             }
         }
 
@@ -40,25 +33,27 @@ public class InputManager : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 100.0f))
             {
-                Debug.Log(hit.transform.name);
-                if (selectedTile != null)
-                {
-                    // Deselect current selection
-                    selectedTile.GetComponent<ITile>().Deselect();
-                }
-                if (hit.transform.GetComponent<ITile>() != null)
-                {
-                    // Set new selection
-                    selectedTile = hit.transform;
-                    hit.transform.GetComponent<ITile>().Select();
-                }
-                else
-                {
-                    // If we don't click a unit, deselect the whole thing
-                    selectedTile = null;
-                }
+                _selectedTile = SelectObject(hit, _selectedTile, typeof(ITile));
             }
         }
+    }
+
+    private Transform SelectObject(RaycastHit hit, Transform gameObjectToSelect, Type targetType)
+    {
+        if (gameObjectToSelect != null)
+        {
+            // Deselect current selection
+            var selector = gameObjectToSelect.GetComponent(targetType) as ISelectable;
+            selector.Deselect();
+        }
+        if (hit.transform.GetComponent(targetType) != null && hit.transform != gameObjectToSelect)
+        {
+            var selector = hit.transform.GetComponent(targetType) as ISelectable;
+            selector.Select();
+            return hit.transform;
+        }
+        return null;
+
     }
 
 }
