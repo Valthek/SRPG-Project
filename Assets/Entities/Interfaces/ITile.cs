@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace Assets.Entities.Interfaces
 {
-    interface ITile
+    interface ITile:ISelectable
     {
         [SerializeField]
         GameObject WayPoint { get; set; }

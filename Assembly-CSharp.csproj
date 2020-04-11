@@ -65,9 +65,11 @@
   <ItemGroup>
     <Compile Include="Assets\Entities\Attributes\Health.cs" />
     <Compile Include="Assets\Entities\Attributes\Movement.cs" />
+    <Compile Include="Assets\Entities\Interfaces\ISelectable.cs" />
     <Compile Include="Assets\Entities\Interfaces\ITile.cs" />
     <Compile Include="Assets\Entities\Interfaces\IUnit.cs" />
     <Compile Include="Assets\Entities\Player.cs" />
+    <Compile Include="Assets\Entities\Tile.cs" />
     <Compile Include="Assets\Managers\GameManager.cs" />
     <Compile Include="Assets\Managers\InputManager.cs" />
     <Reference Include="Unity.Timeline.Editor">

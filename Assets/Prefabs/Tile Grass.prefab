@@ -9,8 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3810129809390398729}
+  - component: {fileID: 8255270260906157188}
+  - component: {fileID: 852248760781560652}
   m_Layer: 0
-  m_Name: Tile 1
+  m_Name: Tile Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,6 +34,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8255270260906157188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2372865529018398589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c4f7183d746f6741add072272123d85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RegularMaterial: {fileID: 2100000, guid: 60cad7be692ab8e4c872f0338a96d43c, type: 2}
+  SelectedMaterial: {fileID: 2100000, guid: 6459db0ec7fc9ef4198dc2f9954f60bc, type: 2}
+  TileObject: {fileID: 8107412120525407071}
+--- !u!65 &852248760781560652
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2372865529018398589}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4311686810213618750
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,7 +104,6 @@ GameObject:
   - component: {fileID: 6978316181199317290}
   - component: {fileID: 5615788527695831803}
   - component: {fileID: 7608971606935413495}
-  - component: {fileID: 5748451128325207338}
   m_Layer: 0
   m_Name: TileObject
   m_TagString: Untagged
@@ -146,20 +175,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &5748451128325207338
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 423753676012534317, guid: 14efdfba3d161fc48b61706678a06042,
-    type: 3}
-  m_PrefabInstance: {fileID: 5343486190559055623}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8107412120525407071}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &5343486190559055623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -227,5 +242,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TileObject
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4225696137054997592, guid: 14efdfba3d161fc48b61706678a06042,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 14efdfba3d161fc48b61706678a06042, type: 3}

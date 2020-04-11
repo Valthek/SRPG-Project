@@ -6,8 +6,8 @@ namespace Assets.Entities
 {
     public class Player : MonoBehaviour, IUnit
     {
-        public Material RegularMaterial { get; set; }
-        public Material SelectedMaterial { get; set; }
+        public Material RegularMaterial;
+        public Material SelectedMaterial;
 
         public Movement Movement { get; set; }
         public Health Health { get; set; }
