@@ -65,13 +65,17 @@
   <ItemGroup>
     <Compile Include="Assets\Entities\Attributes\Health.cs" />
     <Compile Include="Assets\Entities\Attributes\Movement.cs" />
+    <Compile Include="Assets\Entities\Attributes\TerrainAttributes.cs" />
     <Compile Include="Assets\Entities\Interfaces\ISelectable.cs" />
     <Compile Include="Assets\Entities\Interfaces\ITile.cs" />
     <Compile Include="Assets\Entities\Interfaces\IUnit.cs" />
     <Compile Include="Assets\Entities\Player.cs" />
     <Compile Include="Assets\Entities\Tile.cs" />
+    <Compile Include="Assets\Helpers\PathfindingHelper.cs" />
     <Compile Include="Assets\Managers\GameManager.cs" />
     <Compile Include="Assets\Managers\InputManager.cs" />
+    <Compile Include="Assets\Managers\TerrainManager.cs" />
+    <Compile Include="Assets\UI\UnitControls.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Projects/Unity/SRPG/SRPG/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

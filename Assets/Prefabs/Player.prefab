@@ -108,3 +108,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RegularMaterial: {fileID: 2100000, guid: d881246f2c19db647ab27258706ed534, type: 2}
   SelectedMaterial: {fileID: 2100000, guid: 4c02144af2a3ba7469558947fe2704ae, type: 2}
+  _movement:
+    _movementErrorMargin: 0.1

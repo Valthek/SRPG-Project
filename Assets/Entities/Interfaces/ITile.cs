@@ -7,11 +7,18 @@ using UnityEngine;
 
 namespace Assets.Entities.Interfaces
 {
-    interface ITile:ISelectable
+    public interface ITile:ISelectable
     {
         [SerializeField]
         GameObject WayPoint { get; set; }
-        Vector3 RealPosition { get; set; }
         Vector3 TilePosition { get; set; }
+        float MovementCost { get; set; }
+
+        // Pathfinding nonsense
+        List<ITile> Neighbors { get; set; }
+        ITile PreviousNode { get; set; }
+        float gScore { get; set; }
+        float fScore { get; set; }
+        float hScore { get; set; }
     }
 }

@@ -82,5 +82,10 @@ PrefabInstance:
       propertyPath: SelectedMaterial
       value: 
       objectReference: {fileID: 2100000, guid: e56b08dff562ebc4c8d7f4f834719738, type: 2}
+    - target: {fileID: 8255270260906157188, guid: ab14cde5a1810984c9c28ed6aa76e558,
+        type: 3}
+      propertyPath: _movementCost
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab14cde5a1810984c9c28ed6aa76e558, type: 3}

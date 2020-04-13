@@ -7,13 +7,13 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-    private Transform _selectedUnit;
-    private Transform _selectedTile;
+    private GameManager _gameManager;
 
     void Start()
     {
-        _selectedTile = null;
-        _selectedUnit = null;
+        _gameManager = gameObject.GetComponent<GameManager>();
+        _gameManager.SelectedTile = null;
+        _gameManager.SelectedUnit = null;
     }
 
     void Update()
@@ -24,7 +24,7 @@ public class InputManager : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 100.0f))
             {
-                _selectedUnit = SelectObject(hit, _selectedUnit, typeof(IUnit));
+                _gameManager.SelectedUnit = SelectObject(hit, _gameManager.SelectedUnit, typeof(IUnit));
             }
         }
 
@@ -33,7 +33,7 @@ public class InputManager : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 100.0f))
             {
-                _selectedTile = SelectObject(hit, _selectedTile, typeof(ITile));
+                _gameManager.SelectedTile = SelectObject(hit, _gameManager.SelectedTile, typeof(ITile));
             }
         }
     }

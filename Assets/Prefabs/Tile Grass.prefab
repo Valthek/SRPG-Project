@@ -49,6 +49,7 @@ MonoBehaviour:
   RegularMaterial: {fileID: 2100000, guid: 60cad7be692ab8e4c872f0338a96d43c, type: 2}
   SelectedMaterial: {fileID: 2100000, guid: 6459db0ec7fc9ef4198dc2f9954f60bc, type: 2}
   TileObject: {fileID: 8107412120525407071}
+  _movementCost: 1
 --- !u!65 &852248760781560652
 BoxCollider:
   m_ObjectHideFlags: 0
